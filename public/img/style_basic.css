@@ -1,0 +1,202 @@
+*, *:after, *:before {
+  padding: 0;
+  margin: 0;
+}
+body{
+    background-image: url(bg-image.jpg);
+    background-attachment: fixed;
+    font-family: 'Candara', 'Time New Romans';
+}
+
+/*стиль верхньої частини сторінки (шапки)*/
+header{
+  display: grid;
+  z-index: 1000;
+  position:fixed;
+  top:0;
+  width: 100%;
+  height: 8vw; 												/* Здесь переделал */
+  background-color: #3F404B;
+  box-shadow:	0 0 20px #000000;
+  grid-template-columns: 3fr 2fr 5fr 4fr 1fr 3fr;
+}
+
+#name_site_block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#name_site_link{
+  text-decoration: none;
+}
+#name_before_ua{
+  font-size: 2.19vw;											/* Здесь переделал */
+  color: #1E90FF;
+}
+#name_ua{
+  font-size: 2.19vw;											/* Здесь переделал */
+  color: #ffffff;
+}
+#name_site_link:hover #name_before_ua{
+  color:rgb(212,75,56);
+}
+
+#catalog_site_block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#catalog_site_link{
+  width: 80%;
+  height: 70%;
+  font-weight: bold;
+  background: #1E90FF;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  font-size: 2.19vw;											/* Здесь переделал */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#catalog_site_link:hover{
+  background: rgb(212,75,56);
+}
+
+#search_site_block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#search_form{
+  width: 80%;
+  float: left;
+  position: relative;
+  height: 100%;
+}
+#search{
+  font-size: 1.72vw;											/* Здесь переделал */
+  outline: none;
+  float: left;
+  position: relative;
+  border: 0;
+  padding: 0 2%;
+  width: 70%;
+  height: 50%;
+  top: 25%;
+}
+#search_button{
+  font-weight: bold;
+  color: #ffffff;
+  background: #1E90FF;
+  font-size: 1.70vw;											/* Здесь переделал */
+  cursor: pointer;
+  outline: none;
+  padding: 0 0;
+  border: 0;
+  position: relative;
+  width: 26%;
+  height: 50%;
+  top: 25%;
+}
+#search_button:hover{
+  background: rgb(212,75,56);
+}
+
+#about_site_block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#info_site, #info_site1{
+  font-weight: bold;
+  float: right;
+  font-size: 1.2vw;											/* Здесь переделал */
+  text-decoration: none;
+  color: #1E90FF;
+  border-bottom: 1px dashed #1E90FF;
+}
+#info_site1{
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+#reg_auto_site_block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#registration_autorization_user_block{
+  width: 18%;
+  height: 100%;
+  float:  right;
+}
+#registration_button{
+  font-weight: bold;
+  float: right;
+  font-size: 1.2vw;											/* Здесь переделал */
+  text-decoration: none;
+  color: #1E90FF;
+  border-bottom: 1px dashed #1E90FF;
+}
+#registration_button:hover, #info_site:hover, #info_site1:hover{
+  border-bottom: 1px dashed rgb(212,75,56);
+  color: rgb(212,75,56);
+}
+#autorization_button{
+  font-weight: bold;
+  margin-left: 5%;
+  width: 48%;
+  height: 50%;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.2vw;											/* Здесь переделал */
+  color: #fff;
+  text-decoration: none;
+  background: rgb(212,75,56);
+  border: none;
+  float: right;
+
+}
+#autorization_button:hover{
+  background: #1E90FF;
+  font-size: 1.09vw;											/* Здесь переделал */
+}
+
+/* стиль каталогу */
+#catalog_window{
+  display: none;
+  position: absolute;
+  top: 17.5%;
+  left: 17.5%;
+  width: 65%;
+  height: 65%;
+  background: #ffffff;
+  box-shadow:	0 0 20px #000000;
+}
+#close_catalog_button{
+  cursor: pointer;
+  font-size: 1.15vw;											/* Здесь переделал */
+  font-weight: bold;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  height: 5%;
+	user-select:none;
+	width: 5%;
+	text-align:center;
+	float:right;
+	background-color: rgb(212,75,56);
+  border-radius: 0 0 0 5px;
+}
+#close_catalog_button:hover{
+  font-size: 1.04vw;											/* Здесь переделал */
+	background-color: #1E90FF;
+}
