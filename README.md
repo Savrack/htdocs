@@ -4,7 +4,7 @@ INSTALLATION
 ------------
 
   1) Please, open your directory "xampp"
-  2) Delete your own directory "htdocs"
+  2) Delete your directory "htdocs"
   3) Clone this project into directory "xampp"
 
 
