@@ -12,6 +12,7 @@
 
   </head>
   <body>
+    <!-- Вікно реєстрації і авторизації -->
     <div id = "regist_auto_site">
       <div id = "close_regist_auto_button">X</div>
       <div id = "regist_auto_block">
