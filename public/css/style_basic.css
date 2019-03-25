@@ -3,9 +3,9 @@
   margin: 0;
 }
 body{
-    background-image: url(/img/Imag_S/bg-image.jpg);
-    background-attachment: fixed;
-    font-family: 'Candara', 'Time New Romans';
+  background-image: url(/img/Imag_S/bg-image.jpg);
+  background-attachment: fixed;
+  font-family: 'Candara', 'Time New Romans';
 }
 
 /*стиль верхньої частини сторінки (шапки)*/
@@ -197,7 +197,6 @@ header{
   background: rgb(212,75,56);
   border: none;
   float: right;
-
 }
 #autorization_button:hover{
   background: #1E90FF;
@@ -226,15 +225,15 @@ nav{
   text-align: center;
   display: flex;
   height: 40px;
-	user-select:none;
-	width: 60px;
-	text-align:center;
-	float:right;
-	background-color: rgb(212,75,56);
+  user-select:none;
+  width: 60px;
+  text-align:center;
+  float:right;
+  background-color: rgb(212,75,56);
 }
 #close_catalog_button:hover ,#close_regist_auto_button:hover{
   font-size: 1.04vw;
-	background-color: #1E90FF;
+  background-color: #1E90FF;
 }
 
 #catalog_site_links{
@@ -306,7 +305,6 @@ nav{
   position: relative;
 }
 .beads a {
-
   font-weight: bold;
   text-decoration: none;
   color: #464643;
