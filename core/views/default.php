@@ -12,6 +12,12 @@
 
   </head>
   <body>
+
+    <div id = "white_backgraund">
+        <div id = "black_backgraund">
+        </div>
+    </div>
+
     <!-- Вікно реєстрації і авторизації -->
     <div id = "regist_auto_site">
       <div id = "close_regist_auto_button">X</div>

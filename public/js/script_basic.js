@@ -5,9 +5,11 @@ $(document).ready(function(){
   // скрипт відкриває вікно при кліку на кнопку каталогу
   $('#catalog_site_link').click(function(){
     $("nav").fadeIn(0);
+    $("#white_backgraund").fadeIn(0);
   });
   $('#close_catalog_button').click(function(){
     $("nav").fadeOut(0);
+    $("#white_backgraund").fadeOut(0);
   });
 
   // скрип відкриває вікно з вибором мови
