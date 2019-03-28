@@ -1,4 +1,4 @@
-*, *:after, *:before {
+﻿*, *:after, *:before {
   padding: 0;
   margin: 0;
 }
@@ -6,6 +6,29 @@ body{
   background-image: url(/img/Imag_S/bg-image.jpg);
   background-attachment: fixed;
   font-family: 'Candara', 'Time New Romans';
+}
+#white_backgraund{
+  display: none;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position:fixed;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+#black_backgraund{
+  opacity: 0.9;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position:fixed;
+  background-color:#000000	;
+  width: 100%;
+  height: 100%;
 }
 
 /*стиль верхньої частини сторінки (шапки)*/
@@ -26,11 +49,14 @@ header{
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-height: 5vw;
 }
 #name_site_link{
+  max-height: 5vw;
   text-decoration: none;
 }
 #name_before_ua{
+  position: relative;
   font-size: 2.19vw;
   color: #1E90FF;
 }
@@ -47,6 +73,7 @@ header{
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-height: 5vw;
 }
 #catalog_site_link{
   width: 80%;
@@ -70,8 +97,10 @@ header{
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-height: 5vw;
 }
 #search_form{
+  max-height: 5vw;
   width: 80%;
   float: left;
   position: relative;
@@ -111,6 +140,7 @@ header{
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-height: 5vw;
 }
 #info_site, #info_site1{
   font-weight: bold;
@@ -118,7 +148,6 @@ header{
   font-size: 1.2vw;
   text-decoration: none;
   color: #1E90FF;
-  border-bottom: 1px dashed #1E90FF;
 }
 #info_site1{
   margin-left: 7%;
@@ -130,6 +159,7 @@ header{
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-height: 5vw;
 }
 #language_site_button{
   display: flex;
@@ -166,6 +196,7 @@ header{
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-height: 5vw;
 }
 #registration_autorization_user_block{
   width: 18%;
@@ -178,10 +209,8 @@ header{
   font-size: 1.2vw;
   text-decoration: none;
   color: #1E90FF;
-  border-bottom: 1px dashed #1E90FF;
 }
 #registration_button:hover, #info_site:hover, #info_site1:hover{
-  border-bottom: 1px dashed rgb(212,75,56);
   color: rgb(212,75,56);
 }
 #autorization_button{
@@ -208,7 +237,7 @@ nav{
   z-index: 1002;
   display: none;
   position: absolute;
-  top: 13.5%;
+  top: 5%;
   left: 17.5%;
   width: 65%;
   height: auto;
@@ -460,7 +489,7 @@ nav{
   height: 40px;
   border: 2px solid #1E90FF;
 }
-#regist_auto_button{
+#auto_button, #regist_button{
   background: rgb(212,75,56);;
   border: none;
   outline: none;
@@ -472,6 +501,26 @@ nav{
   font-weight: bold;
   color: #ffffff;
 }
-#regist_auto_button:hover{
+#auto_button:hover, #regist_button:hover{
   background: #1E90FF;
+}
+
+.reg_message_good{
+  background-color: rgb(231, 253, 231);
+  color: #2E8B57;
+}
+.reg_message_bad{
+  background-color: rgb(253, 231, 231);
+  color: red;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: #3F404B;
+  height: 1.5vw;
+  padding: 0.75vw;
+}
+#copyright_block{
+  font-size: 1.4vw;
 }
