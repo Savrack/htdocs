@@ -38,6 +38,7 @@
         </form>
       </div>
       <div id = "regist" >
+        <div id = "reg_message"></div>
         <form method = "post" id = "reg" action = "/core/lib/reg.php">
           <input class = "regist_auto_field_reg" type = "text" name = "reg_surname" placeholder = "Прізвище"/>
           <input class = "regist_auto_field_reg" type = "text" name = "reg_name" placeholder = "Ім'я"/>
@@ -49,7 +50,6 @@
 
           <button id = "regist_button">Підтвердити</button>
         </form>
-        <div id = "reg_message"></div>
       </div>
     </div>
 

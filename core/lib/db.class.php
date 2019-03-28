@@ -40,6 +40,9 @@ class DB{
     if(mysqli_connect_error()){
       throw new Exception('could not connect to DB');
     }
+
+    // задаємо кодировку БД
+    $this->connection->set_charset("utf8");
   }
 }
 ?>
