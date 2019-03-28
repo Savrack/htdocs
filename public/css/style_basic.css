@@ -484,7 +484,7 @@ nav{
   height: 40px;
   border: 2px solid #1E90FF;
 }
-#regist_auto_button{
+#auto_button, #regist_button{
   background: rgb(212,75,56);;
   border: none;
   outline: none;
@@ -496,6 +496,15 @@ nav{
   font-weight: bold;
   color: #ffffff;
 }
-#regist_auto_button:hover{
+#auto_button:hover, #regist_button:hover{
   background: #1E90FF;
+}
+
+.reg_message_good{
+  background-color: rgb(231, 253, 231);
+  color: #2E8B57;
+}
+.reg_message_bad{
+  background-color: rgb(253, 231, 231);
+  color: red;
 }

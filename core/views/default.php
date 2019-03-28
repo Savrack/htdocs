@@ -9,7 +9,8 @@
 
     <script src = "/js/script_jquery.js"></script> <!-- Підключаємо бібліотеку jquery 3.2.1 -->
     <script src = "/js/script_basic.js" ></script> <!-- Підключаємо базові скріпти сайту    <script src = "http://malsup.github.com/jquery.form.js"></script> -->
-
+    <script src = "/js/jquery.validate.min.js"></script> <!-- Підключаємо бібліотеку яка відповідає за валідацію -->
+    <script src = "http://malsup.github.com/jquery.form.js"></script>
   </head>
   <body>
 
@@ -33,21 +34,22 @@
         <form method = "post">
           <input class = "regist_auto_field_auto" type = "text" name = "email" placeholder = "Ваший E-mail"/>
           <input class = "regist_auto_field_auto" type = "password" name = "password" placeholder = "Пароль"/>
-          <input type = "button" id = "regist_auto_button" value = "Підтвердити">
+          <button id = "auto_button">Підтвердити</button>
         </form>
       </div>
-      <div id = "regist">
-        <form method = "post">
-          <input class = "regist_auto_field_reg" type = "text" name = "last_name" placeholder = "Прізвище"/>
-          <input class = "regist_auto_field_reg" type = "text" name = "first_name" placeholder = "Ім'я"/>
-          <input class = "regist_auto_field_reg" type = "text" name = "email" placeholder = "E-mail"/>
-          <input class = "regist_auto_field_reg" type = "password" name = "password" placeholder = "Пароль"/>
-          <input class = "regist_auto_field_reg" type = "password" name = "cheak_password" placeholder = "Повторіть пароль"/>
-          <input class = "regist_auto_field_reg" type = "text" name = "phone_number" placeholder = "Телефон"/>
-          <input class = "regist_auto_field_reg" type = "text" name = "adress" placeholder = "Адреса доставки"/>
+      <div id = "regist" >
+        <form method = "post" id = "reg" action = "/core/lib/reg.php">
+          <input class = "regist_auto_field_reg" type = "text" name = "reg_surname" placeholder = "Прізвище"/>
+          <input class = "regist_auto_field_reg" type = "text" name = "reg_name" placeholder = "Ім'я"/>
+          <input class = "regist_auto_field_reg" type = "text" name = "reg_email" placeholder = "E-mail"/>
+          <input class = "regist_auto_field_reg" type = "password" name = "reg_pass" id = "reg_pass" placeholder = "Пароль"/>
+          <input class = "regist_auto_field_reg" type = "password" name = "reg_pass_check" placeholder = "Повторіть пароль"/>
+          <input class = "regist_auto_field_reg" type = "text" name = "reg_phone" placeholder = "Телефон"/>
+          <input class = "regist_auto_field_reg" type = "text" name = "reg_address" placeholder = "Адреса доставки"/>
 
-          <input type = "button" id = "regist_auto_button" value = "Підтвердити">
+          <button id = "regist_button">Підтвердити</button>
         </form>
+        <div id = "reg_message"></div>
       </div>
     </div>
 
