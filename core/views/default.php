@@ -14,43 +14,121 @@
   </head>
   <body>
 
-    <div id = "white_backgraund">
-        <div id = "black_backgraund">
-        </div>
-    </div>
+    <!-- форма реєстрації/авторизації/відновлення паролю -->
+    <div class = "user-modal">
+      <center>
+        <div class = "user-modal-container">
 
-    <!-- Вікно реєстрації і авторизації -->
-    <div id = "regist_auto_site">
-      <div id = "close_regist_auto_button">X</div>
-      <div id = "regist_auto_block">
-        <div id = "regist_block">
-          <a href = "#" id = "title_block" class = "sign_in ">Вхід</a>
-        </div>
-        <div id = "auto_block">
-          <a href = "#" id = "title_block" class = "reg ">Реєстрація</a>
-        </div>
-      </div>
-      <div id = "auto">
-        <form method = "post">
-          <input class = "regist_auto_field_auto" type = "text" name = "email" placeholder = "Ваший E-mail"/>
-          <input class = "regist_auto_field_auto" type = "password" name = "password" placeholder = "Пароль"/>
-          <button id = "auto_button">Підтвердити</button>
-        </form>
-      </div>
-      <div id = "regist" >
-        <div id = "reg_message"></div>
-        <form method = "post" id = "reg" action = "/core/lib/reg.php">
-          <input class = "regist_auto_field_reg" type = "text" name = "reg_surname" placeholder = "Прізвище"/>
-          <input class = "regist_auto_field_reg" type = "text" name = "reg_name" placeholder = "Ім'я"/>
-          <input class = "regist_auto_field_reg" type = "text" name = "reg_email" placeholder = "E-mail"/>
-          <input class = "regist_auto_field_reg" type = "password" name = "reg_pass" id = "reg_pass" placeholder = "Пароль"/>
-          <input class = "regist_auto_field_reg" type = "password" name = "reg_pass_check" placeholder = "Повторіть пароль"/>
-          <input class = "regist_auto_field_reg" type = "text" name = "reg_phone" placeholder = "Телефон"/>
-          <input class = "regist_auto_field_reg" type = "text" name = "reg_address" placeholder = "Адреса доставки"/>
+          <!-- Блок з переключателями між формами -->
+          <div class = "switcher">
+            <a href = "#0">Вхід</a>
+            <a href = "#0">Реєстрація</a>
+            <a href = "#0">Відновлення паролю</a>
+          </div>
 
-          <button id = "regist_button">Підтвердити</button>
-        </form>
-      </div>
+          <!-- форма входу -->
+          <div id = "box_login">
+            <form class = "modal-form">
+
+              <!-- поле з email -->
+              <div class = "modal-form-field">
+                <label class = "image-replace email-pic" for = "signin_email">E-mail</label>
+                <input class = "full-width has-padding has-border" id = "signin_email" name = "email" type = "email" placeholder = "E-mail">
+                <span class = "modal-error-message">Тут повідомлення про помилку!</span>
+              </div>
+
+              <!-- поле з паролем -->
+              <div class = "modal-form-field">
+                <label class = "image-replace password-pic" for = "signin_password">Пароль</label>
+                <input class = "full-width has-padding has-border" id = "signin_password" name = "password" type = "text"  placeholder = "Пароль">
+                <a href = "#0" class = "hide-password">Сховати</a>
+                <span class = "modal-error-message">Тут повідомлення про помилку!</span>
+              </div>
+
+              <div class = "modal-form-field">
+                <input class = "full-width" type = "submit" value = "Увійти">
+              </div>
+            </form>
+            <a href = "#0" class = "modal-close-form"></a>
+          </div>
+
+          <!-- форма реєстрації -->
+          <div id = "box_signup">
+            <form class = "modal-form" method = "post">
+
+              <!-- поле з email -->
+              <div class = "modal-form-field">
+                <label class = "image-replace email-pic" for = "signin_email">E-mail</label>
+                <input class = "full-width has-padding has-border" id = "signin_email" name = "email" type = "email" placeholder = "E-mail">
+              </div>
+
+              <!-- поле з паролем -->
+              <div class = "modal-form-field">
+                <label class = "image-replace password-pic" for = "signin_password">Пароль</label>
+                <input class = "full-width has-padding has-border" id = "signin_password" name = "password" type = "text"  placeholder = "Пароль">
+                <a href = "#0" class = "hide-password">Сховати</a>
+              </div>
+
+              <!-- поле з перевіркою пароля -->
+              <div class = "modal-form-field">
+                <label class = "image-replace password-pic" for = "signin_password">Пароль</label>
+                <input class = "full-width has-padding has-border" id = "signin_password" name = "password_check" type = "text"  placeholder = "Пароль">
+                <a href = "#0" class = "hide-password">Сховати</a>
+              </div>
+
+              <!-- поле з прізвищем -->
+              <div class = "modal-form-field">
+                <label class = "image-replace email-pic" for = "signin_email">Прізвище (необов'язково)</label>
+                <input class = "full-width has-padding has-border" id = "signin_email" name = "surname" type = "text" placeholder = "Прізвище (необов'язково)">
+              </div>
+
+              <!-- поле з ім'ям -->
+              <div class = "modal-form-field">
+                <label class = "image-replace email-pic" for = "signin_email">Ім'я</label>
+                <input class = "full-width has-padding has-border" id = "signin_email" name = "name" type = "text" placeholder = "Ім'я">
+              </div>
+
+              <!-- поле з телефоном-->
+              <div class = "modal-form-field">
+                <label class = "image-replace email-pic" for = "signin_email">Телефон</label>
+                <input class = "full-width has-padding has-border" id = "signin_email" name = "phone" type = "text" placeholder = "Телефон">
+              </div>
+
+              <!-- поле з адресою доставки-->
+              <div class = "modal-form-field">
+                <label class = "image-replace email-pic" for = "signin_email">Адреса доставки (необов'язково)</label>
+                <input class = "full-width has-padding has-border" id = "signin_email" name = "address" type = "text" placeholder = "Адреса доставки (необов'язково)">
+              </div>
+
+              <div class = "modal-form-field">
+                <input class = "full-width" type = "submit" value = "Створити акаунт">
+              </div>
+            </form>
+            <a href = "#0" class = "modal-close-form"></a>
+          </div>
+
+           <!-- форма відновлення паролю -->
+          <div id = "box_reset_password">
+            <form class = "modal-form">
+
+              <p class = "modal-form-message">Забули свій пароль? Будь ласка, введіть адрес вашої електронної пошти. Ви отримаєте ...</p>
+
+              <!-- поле з email -->
+              <div class = "modal-form-field">
+                <label class = "image-replace email-pic" for = "signin_email">E-mail</label>
+                <input class = "full-width has-padding has-border" id = "signin_email" name = "email" type = "email" placeholder = "E-mail">
+                <span class = "modal-error-message">Тут повідомлення про помилку!</span>
+              </div>
+
+              <div class = "modal-form-field">
+                <input class = "full-width" type = "submit" value = "Відновити пароль">
+              </div>
+            </form>
+            <a href = "#0" class = "modal-close-form"></a>
+          </div>
+
+        </div>
+      </center>
     </div>
 
     <!-- поле яке дозволяє вибрати мову -->
@@ -179,9 +257,9 @@
           <img src = "/public/img/<?= App::getRouter()->getLanguage();?>.png" id = "language_site_img">
         </a>
       </div>
-      <div id = "reg_auto_site_block">
-        <a href = "#" id = "registration_button"><?= __('header_registr_link');?></a>
-        <input type = "button" id = "autorization_button" class = "autorization_button" value = "<?= __('header_autoris_button');?>">
+      <div id = "reg_auto_site_block" class = "main-nav">
+        <a href = "#" id = "registration_button" class = "signup"><?= __('header_registr_link');?></a>
+        <a href = "#" id = "autorization_button" class = "signin"><?= __('header_autoris_button');?></a>
       </div>
     </header>
   </body>

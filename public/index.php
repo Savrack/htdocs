@@ -10,12 +10,12 @@ require_once(ROOT.DS.'core'.DS.'lib'.DS.'init.php');  // підключення 
 
 // перевірка яким чином звернулися до сторінки
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-  $surname    = ltrim($_POST["reg_surname"]);
-  $name       = ltrim($_POST["reg_name"]);
-  $email      = ltrim($_POST["reg_email"]);
-  $password   = ltrim($_POST["reg_pass"]);
-  $phone      = ltrim($_POST["reg_phone"]);
-  $address    = ltrim($_POST["reg_address"]);
+  $surname    = ltrim($_POST["surname"]);
+  $name       = ltrim($_POST["name"]);
+  $email      = ltrim($_POST["email"]);
+  $password   = ltrim($_POST["password"]);
+  $phone      = ltrim($_POST["phone"]);
+  $address    = ltrim($_POST["address"]);
   $ip = $_SERVER["REMOTE_ADDR"];
 
 

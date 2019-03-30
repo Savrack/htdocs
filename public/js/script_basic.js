@@ -148,3 +148,116 @@ $(document).ready(function(){
     }
   });
 });
+
+$(document).ready(function($){
+	var $form_modal =             $('.user-modal'),                                // все вікно з реєстрацією, авторизацією відновленням паролю
+
+		  $form_login =             $form_modal.find('#box_login'),                      // вікно з авторизацією
+		  $form_signup =            $form_modal.find('#box_signup'),                     // вікно з реєстрацією
+		  $form_forgot_password =   $form_modal.find('#box_reset_password'),             // вікно з відновленням паролю
+
+		  $form_modal_tab =         $('.switcher'),                                  // вікно з вибором вікна
+
+  		$tab_login =              $form_modal_tab.children('a').eq(0), // кнопка входу
+      $tab_signup =             $form_modal_tab.children('a').eq(1), // кнопка реєстрації
+  		$tab_reset_password =     $form_modal_tab.children('a').eq(2), // кнопка відновлення паролю
+
+  		$main_nav =               $('.main-nav'); // вікно з вибором форми
+
+
+	// відкрити модальне вікно
+	$main_nav.on('click', function(event){
+
+    // делегування подій
+		if($(event.target).is($main_nav)) {
+
+			// відкриття на мобільних підменю
+			$(this).children('ul').toggleClass('is-visible');
+		}
+    else {
+
+			// закриття підменю на мобільних
+			$main_nav.children('ul').removeClass('is-visible');
+
+			// показати модальний шар
+			$form_modal.addClass('is-visible');
+
+			// показати вибрану форму
+      if($(event.target).is('.signin')){
+        login_selected();
+      }
+      else{
+        signup_selected();
+      }
+		}
+
+	});
+
+	// закрити модальне вікно
+	$('.user-modal').on('click', function(event){
+		if($(event.target).is('.modal-close-form') ) {
+			$form_modal.removeClass('is-visible');
+		}
+	});
+
+	// закрити модальне вікно нажавши клавішу Esc
+	$(document).keyup(function(event){
+    	if(event.which == '27'){
+    		$form_modal.removeClass('is-visible');
+	    }
+    });
+
+	// переключання від вкладки до вкладки
+	$form_modal_tab.on('click', function(event) {
+		event.preventDefault();
+
+    // вибір вкладки
+    if($(event.target).is($tab_login)){
+      login_selected();
+    }
+    else if($(event.target).is($tab_signup)){
+      signup_selected();
+    }
+    else{
+      forgot_password_selected();
+    }
+	});
+
+	// сховати чи показати пароль
+	$('.hide-password').on('click', function(){
+		var $this = $(this),
+			$password_field = $this.prev('input');
+
+		('password' == $password_field.attr('type')) ? $password_field.attr('type', 'text') : $password_field.attr('type', 'password');
+		('Сховати' == $this.text()) ? $this.text('Показати') : $this.text('Сховати');
+
+		// фокус і переміщення курсора в кінець поля вводу
+		$password_field.putCursorAtEnd();
+	});
+
+  // функції, які відповідають за певний вигляд вікон
+	function login_selected(){
+		$form_login.addClass('is-selected');
+		$form_signup.removeClass('is-selected');
+		$form_forgot_password.removeClass('is-selected');
+		$tab_login.addClass('selected');
+		$tab_signup.removeClass('selected');
+    $tab_reset_password.removeClass('selected');
+	}
+	function signup_selected(){
+    $form_login.removeClass('is-selected');
+		$form_signup.addClass('is-selected');
+		$form_forgot_password.removeClass('is-selected');
+		$tab_login.removeClass('selected');
+		$tab_signup.addClass('selected');
+    $tab_reset_password.removeClass('selected');
+	}
+	function forgot_password_selected(){
+    $form_login.removeClass('is-selected');
+		$form_signup.removeClass('is-selected');
+		$form_forgot_password.addClass('is-selected');
+		$tab_login.removeClass('selected');
+		$tab_signup.removeClass('selected');
+    $tab_reset_password.addClass('selected');
+	}
+});
